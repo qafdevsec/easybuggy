@@ -74,7 +74,7 @@
 		<dependency>
     			<groupId>org.apache.rocketmq</groupId>
     			<artifactId>rocketmq-broker</artifactId>
-    			<version>5.1.0</version>
+    			<version>5.2.0</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -208,13 +208,10 @@
 						</goals>
 						<configuration>
 							<tasks>
-								<mkdir dir="logs" />
-								<copy file="${basedir}/src/main/resources/messages_en.properties"
-									tofile="${project.build.outputDirectory}/messages.properties" />
-								<copy file="${basedir}/src/main/resources/indexpage_en.properties"
-									tofile="${project.build.outputDirectory}/indexpage.properties" />
-								<delete
-									file="${project.build.outputDirectory}/org/t246osslab/easybuggy/core/utils/DeleteClassWhileMavenBuild.class" />
+								<mkdir dir="logs"/>
+								<copy file="${basedir}/src/main/resources/messages_en.properties" tofile="${project.build.outputDirectory}/messages.properties"/>
+								<copy file="${basedir}/src/main/resources/indexpage_en.properties" tofile="${project.build.outputDirectory}/indexpage.properties"/>
+								<delete file="${project.build.outputDirectory}/org/t246osslab/easybuggy/core/utils/DeleteClassWhileMavenBuild.class"/>
 							</tasks>
 						</configuration>
 					</execution>
