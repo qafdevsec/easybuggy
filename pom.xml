@@ -63,7 +63,7 @@
 		<dependency>
     			<groupId>org.apache.tomcat.embed</groupId>
     			<artifactId>tomcat-embed-core</artifactId>
-    			<version>8.5.92</version>
+    			<version>8.5.99</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
@@ -208,13 +208,10 @@
 						</goals>
 						<configuration>
 							<tasks>
-								<mkdir dir="logs" />
-								<copy file="${basedir}/src/main/resources/messages_en.properties"
-									tofile="${project.build.outputDirectory}/messages.properties" />
-								<copy file="${basedir}/src/main/resources/indexpage_en.properties"
-									tofile="${project.build.outputDirectory}/indexpage.properties" />
-								<delete
-									file="${project.build.outputDirectory}/org/t246osslab/easybuggy/core/utils/DeleteClassWhileMavenBuild.class" />
+								<mkdir dir="logs"/>
+								<copy file="${basedir}/src/main/resources/messages_en.properties" tofile="${project.build.outputDirectory}/messages.properties"/>
+								<copy file="${basedir}/src/main/resources/indexpage_en.properties" tofile="${project.build.outputDirectory}/indexpage.properties"/>
+								<delete file="${project.build.outputDirectory}/org/t246osslab/easybuggy/core/utils/DeleteClassWhileMavenBuild.class"/>
 							</tasks>
 						</configuration>
 					</execution>
