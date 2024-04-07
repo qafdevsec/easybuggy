@@ -150,7 +150,7 @@
 		<dependency>
     			<groupId>org.apache.activemq</groupId>
    			<artifactId>apache-activemq</artifactId>
-    			<version>6.0.0</version>
+    			<version>6.1.1</version>
     			<type>pom</type>
 		</dependency>
 		<dependency>
@@ -208,13 +208,10 @@
 						</goals>
 						<configuration>
 							<tasks>
-								<mkdir dir="logs" />
-								<copy file="${basedir}/src/main/resources/messages_en.properties"
-									tofile="${project.build.outputDirectory}/messages.properties" />
-								<copy file="${basedir}/src/main/resources/indexpage_en.properties"
-									tofile="${project.build.outputDirectory}/indexpage.properties" />
-								<delete
-									file="${project.build.outputDirectory}/org/t246osslab/easybuggy/core/utils/DeleteClassWhileMavenBuild.class" />
+								<mkdir dir="logs"/>
+								<copy file="${basedir}/src/main/resources/messages_en.properties" tofile="${project.build.outputDirectory}/messages.properties"/>
+								<copy file="${basedir}/src/main/resources/indexpage_en.properties" tofile="${project.build.outputDirectory}/indexpage.properties"/>
+								<delete file="${project.build.outputDirectory}/org/t246osslab/easybuggy/core/utils/DeleteClassWhileMavenBuild.class"/>
 							</tasks>
 						</configuration>
 					</execution>
